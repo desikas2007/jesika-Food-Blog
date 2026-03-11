@@ -1,4 +1,4 @@
-const BASE = '/api';
+const BASE = 'https://jesika-food-blog.onrender.com/api';
 
 async function fetchJSON(url, options = {}) {
   const res = await fetch(url, options);
@@ -26,4 +26,5 @@ export const addReview      = (slug, data) => fetchJSON(BASE + '/restaurants/' +
 
 export const sendContact    = (data) => fetchJSON(BASE + '/contact', {
   method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data)
+
 });
